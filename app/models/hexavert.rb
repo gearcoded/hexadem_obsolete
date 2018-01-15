@@ -1,0 +1,2 @@
+class Hexavert < ApplicationRecord
+end

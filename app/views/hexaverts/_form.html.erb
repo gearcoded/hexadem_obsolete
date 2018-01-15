@@ -1,0 +1,26 @@
+<%= form_with(model: hexavert, local: true) do |form| %>
+  <% if hexavert.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hexavert.errors.count, "error") %> prohibited this hexavert from being saved:</h2>
+
+      <ul>
+      <% hexavert.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.text_field :data, id: :hexavert_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :"Click on the button to encode your data" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
